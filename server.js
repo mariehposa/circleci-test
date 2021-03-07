@@ -5,4 +5,4 @@ app.get("/", (req, res) => {
   res.send("Let's CI/CD !!!");
 });
 
-app.listen(8000, () => console.log("Server is working"));
+app.listen(process.env.port || 8000, () => console.log("Server is working"));
