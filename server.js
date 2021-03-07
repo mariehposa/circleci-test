@@ -1,8 +1,8 @@
-const http = require("http");
+const express = require("express");
+const app = express();
 
-http
-  .createServer(function (req, res) {
-    res.write("Let's CI/CD!");
-    res.end();
-  })
-  .listen(8000, "0.0.0.0");
+app.get("/", (req, res) => {
+  res.send("Let's CI/CD !!!");
+});
+
+app.listen(8000, () => console.log("Server is working"));
